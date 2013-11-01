@@ -48,7 +48,7 @@ public class MyRenderer extends GLSurfaceView implements Renderer {
 		
 		parser=new OBJParser(ctx);
 		//model=parser.parseOBJ("/sdcard/windmill.obj");
-		model=parser.parseOBJ("/sdcard/airplane.obj");
+		model=parser.parseOBJ("airplane.obj");
 		Debug.stopMethodTracing();
 		this.setRenderer(this);
 		this.requestFocus();

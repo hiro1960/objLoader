@@ -3,10 +3,12 @@ package com.example.objLoader;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Vector;
 
 import android.content.Context;
+import android.content.res.AssetManager;
 import android.util.Log;
 
 
@@ -35,7 +37,9 @@ public class OBJParser {
 		Material m=null;
 
 		try { //try to open file
-			reader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
+			AssetManager assets = context.getAssets();
+			//reader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
+			reader = new BufferedReader(new InputStreamReader(assets.open(fileName)));
 		} 		catch(IOException e){
 		}
 		try {//try to read lines of the file
