@@ -37,7 +37,7 @@ public class OBJParser {
 		Material m=null;
 
 		try { //try to open file
-			AssetManager assets = context.getAssets();
+			AssetManager assets = context.getAssets();  // ’Ç‰Á
 			//reader = new BufferedReader(new InputStreamReader(new FileInputStream(fileName)));
 			reader = new BufferedReader(new InputStreamReader(assets.open(fileName)));
 		} 		catch(IOException e){
